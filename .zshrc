@@ -114,3 +114,4 @@ PROMPT='%F{blue}%n@%m%f %~ %# '
 alias dotfiles='/usr/bin/git --git-dir=/home/henno/.dotfiles_repo/ --work-tree=/home/henno'
 alias -s txt='nvim'
 alias -s conf='nvim'
+setopt rm_star_silent    # dot not prompt for rm ./*
