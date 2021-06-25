@@ -1,6 +1,6 @@
 " Plugins / Themes:
 call plug#begin('~/.config/nvim/plugins')
-:
+
     " Material theme:
     " Plug 'marko-cerovac/material.nvim'
     " let g:material_style = 'oceanic'
@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/plugins')
     let g:sonokai_disable_italic_comment = 1
     
     Plug 'preservim/nerdtree'
+    Plug 'Raimondi/delimitMate'
 
 
     " Sensible configuration:
