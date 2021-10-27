@@ -42,7 +42,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
@@ -115,3 +115,9 @@ alias dotfiles='/usr/bin/git --git-dir=/home/henno/.dotfiles_repo/ --work-tree=/
 alias -s txt='nvim'
 alias -s conf='nvim'
 setopt rm_star_silent    # dot not prompt for rm ./*
+export EDITOR=nvim
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/2.2.16/gems/vagrant-2.2.16/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)
