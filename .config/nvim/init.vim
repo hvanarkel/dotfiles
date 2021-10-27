@@ -1,11 +1,5 @@
 " Plugins / Themes:
 call plug#begin('~/.config/nvim/plugins')
-
-    " Material theme:
-    " Plug 'marko-cerovac/material.nvim'
-    " let g:material_style = 'oceanic'
-    " TODO: Doesn't work on OSX yet
-   
     " Status bar:
     Plug 'vim-airline/vim-airline'
 
@@ -26,12 +20,12 @@ call plug#begin('~/.config/nvim/plugins')
     " Sensible configuration:
     Plug 'tpope/vim-sensible'
 
+    " Ansible plugin:
+    Plug 'pearofducks/ansible-vim'
 " Initialize plugin system
 call plug#end()
 
 " Turn color scheme on (needs to be outide plug section):
-" colorscheme material
-" TODO: Doesn't work in OSX yet
 colorscheme sonokai
 
 " Settings:
