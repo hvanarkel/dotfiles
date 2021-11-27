@@ -75,6 +75,7 @@ plugins=(
 	colored-man-pages
 	ssh-agent
 	cp
+	tmux
 	sudo
 	zsh-autosuggestions
 	zsh-completions
@@ -116,6 +117,10 @@ alias -s txt='nvim'
 alias -s conf='nvim'
 setopt rm_star_silent    # dot not prompt for rm ./*
 export EDITOR=nvim
+export LC_ALL="en_US.UTF-8"
+
+# Autostart tmux:
+if [ "$TMUX" = "" ]; then tmux; fi
 
 # >>>> Vagrant command completion (start)
 fpath=(/opt/vagrant/embedded/gems/2.2.16/gems/vagrant-2.2.16/contrib/zsh $fpath)
