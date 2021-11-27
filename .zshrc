@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$HOME/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/henno/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 
 # HvA:
 PROMPT='%F{blue}%n@%m%f %~ %# '
-alias dotfiles='/usr/bin/git --git-dir=/home/henno/.dotfiles_repo/ --work-tree=/home/henno'
+alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles_repo/ --work-tree=${HOME}"
 alias -s txt='nvim'
 alias -s conf='nvim'
 setopt rm_star_silent    # dot not prompt for rm ./*
