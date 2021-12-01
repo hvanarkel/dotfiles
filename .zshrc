@@ -101,6 +101,18 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# History command configuration
+HISTFILE=~/.zsh_history
+HISTSIZE=1000                 # how many commands to keep in memory
+SAVEHIST=10000                # size history file
+setopt extended_history       # record timestamp of command in HISTFILE
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+setopt share_history          # share command history data
+setopt hist_ignore_space      # don't record commands that start with whitespace
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -110,7 +122,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# HvA:
 PROMPT='%F{blue}%n@%m%f %~ %# '
 alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles_repo/ --work-tree=${HOME}"
 alias -s txt='nvim'
