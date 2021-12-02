@@ -26,6 +26,7 @@ call plug#begin('~/.config/nvim/plugins')
 call plug#end()
 
 " Turn color scheme on (needs to be outide plug section):
+set termguicolors
 colorscheme sonokai
 
 " Settings:
