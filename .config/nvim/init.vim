@@ -16,13 +16,9 @@ call plug#begin('~/.config/nvim/plugins')
     
     Plug 'preservim/nerdtree'
     Plug 'Raimondi/delimitMate'
-
-
-    " Sensible configuration:
     Plug 'tpope/vim-sensible'
-
-    " Ansible plugin:
     Plug 'pearofducks/ansible-vim'
+    Plug 'hashivim/vim-terraform'
 " Initialize plugin system
 call plug#end()
 
