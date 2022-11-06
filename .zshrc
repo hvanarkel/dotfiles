@@ -108,7 +108,6 @@ SAVEHIST=10000                # size history file
 setopt extended_history       # record timestamp of command in HISTFILE
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
 setopt share_history          # share command history data
 setopt hist_ignore_space      # don't record commands that start with whitespace
@@ -126,6 +125,9 @@ PROMPT='%F{blue}%n@%m%f %~ %# '
 alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles_repo/ --work-tree=${HOME}"
 alias -s txt='nvim'
 alias -s conf='nvim'
+alias vi='nvim'
+alias vim='nvim'
+alias l='ls -lah --color=auto'
 setopt rm_star_silent    # dot not prompt for rm ./*
 export EDITOR=nvim
 export LC_ALL="en_US.UTF-8"
