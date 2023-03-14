@@ -3,3 +3,4 @@
 	nane = Henno van Arkel
 [core]
 	editor = nvim
+        autocrlf = input
