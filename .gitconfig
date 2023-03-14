@@ -1,0 +1,5 @@
+[user]
+	email = henno@vanarkel.cc
+	nane = Henno van Arkel
+[core]
+	editor = nvim
