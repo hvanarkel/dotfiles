@@ -121,7 +121,15 @@ setopt hist_ignore_space      # don't record commands that start with whitespace
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-PROMPT='%F{blue}%n@%m%f %~ %# '
+P# Set prompt (red for root, blue for regular users):
+if [[ $UID -eq 0 ]]; then
+    # For root user
+    PROMPT='%F{red}%n@%m%f %~ %# '
+else
+    # For regular users
+    PROMPT='%F{blue}%n@%m%f %~ %# '
+fi
+
 alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles_repo/ --work-tree=${HOME}"
 
 if [ -x "$(command -v nvim)" ]; then
