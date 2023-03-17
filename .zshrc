@@ -121,7 +121,7 @@ setopt hist_ignore_space      # don't record commands that start with whitespace
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-P# Set prompt (red for root, blue for regular users):
+# Set prompt (red for root, blue for regular users):
 if [[ $UID -eq 0 ]]; then
     # For root user
     PROMPT='%F{red}%n@%m%f %~ %# '
