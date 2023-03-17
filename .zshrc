@@ -123,11 +123,18 @@ setopt hist_ignore_space      # don't record commands that start with whitespace
 
 PROMPT='%F{blue}%n@%m%f %~ %# '
 alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles_repo/ --work-tree=${HOME}"
-alias -s txt='nvim'
-alias -s conf='nvim'
-alias vi='nvim'
-alias vim='nvim'
-alias l='ls -lah --color=auto'
+
+if [ -x "$(command -v nvim)" ]; then
+    alias vi='nvim'
+    alias vim='nvim'
+fi
+
+if [ -x "$(command -v exa)" ]; then
+    alias l="exa -la"
+else
+    alias l="ls -lah --color=auto"
+fi
+
 setopt rm_star_silent    # dot not prompt for rm ./*
 export EDITOR=nvim
 export LC_ALL="en_US.UTF-8"
