@@ -131,6 +131,7 @@ fi
 
 if [ -x "$(command -v exa)" ]; then
     alias l="exa -la"
+    alias ls="exa"
 else
     alias l="ls -lah --color=auto"
 fi
