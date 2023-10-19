@@ -147,6 +147,7 @@ fi
 setopt rm_star_silent    # dot not prompt for rm ./*
 export EDITOR=nvim
 export LC_ALL="en_US.UTF-8"
+complete -C aws_completer aws    # enable auto-complete for awscli
 
 # Autostart tmux:
 if [ "$TMUX" = "" ]; then tmux; fi
