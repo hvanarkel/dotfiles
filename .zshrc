@@ -137,12 +137,7 @@ if [ -x "$(command -v nvim)" ]; then
     alias vim='nvim'
 fi
 
-if [ -x "$(command -v exa)" ]; then
-    alias l="exa -la"
-    alias ls="exa"
-else
-    alias l="ls -lah --color=auto"
-fi
+alias l="ls -lah --color=auto"
 
 setopt rm_star_silent    # dot not prompt for rm ./*
 export EDITOR=nvim
@@ -152,7 +147,9 @@ complete -C aws_completer aws    # enable auto-complete for awscli
 # Autostart tmux:
 if [ "$TMUX" = "" ]; then tmux; fi
 
-# >>>> Vagrant command completion (start)
-fpath=(/opt/vagrant/embedded/gems/2.2.16/gems/vagrant-2.2.16/contrib/zsh $fpath)
-compinit
-# <<<<  Vagrant command completion (end)
+# MacOS settings:
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src

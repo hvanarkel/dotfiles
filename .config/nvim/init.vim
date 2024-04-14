@@ -30,6 +30,10 @@ colorscheme sonokai
 set number          " show line numbers
 set nocompatible    " for vim-polyglot plugin
 
+" Nerdtree settings:
+let g:NERDTreeWinSize = 40
+let g:NERDTreeShowHidden = 1
+
 " Misc Links
 "
 " Plugin Manager:
